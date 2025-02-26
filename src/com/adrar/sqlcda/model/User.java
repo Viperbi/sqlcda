@@ -55,4 +55,12 @@ public class User {
     public void setId(int id) {
         this.id = id;
     }
+    public String toString() {
+        return "User{" +
+                "firstname='" + this.firstname + '\'' +
+                ", lastname='" + this.lastname + '\'' +
+                ", email='" + this.email + '\'' +
+                ",id='" + this.id + '\'' +
+                '}';
+    }
 }
