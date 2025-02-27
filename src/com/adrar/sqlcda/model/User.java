@@ -6,6 +6,7 @@ public class User {
     private String lastname;
     private String email;
     private String password;
+    private Roles role;
 
     public User(){}
 
@@ -55,6 +56,15 @@ public class User {
     public void setId(int id) {
         this.id = id;
     }
+
+    public Roles getRole() {
+        return role;
+    }
+
+    public void setRole(Roles role) {
+        this.role = role;
+    }
+
     public String toString() {
         return "User{" +
                 "firstname='" + this.firstname + '\'' +

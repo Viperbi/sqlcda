@@ -99,13 +99,13 @@ public class UserRepository {
             if (isExist(email)) {
                 String sql = "UPDATE id=?,firstname=?,lastname=?,email=?,password=? FROM users WHERE email = ?";
                 PreparedStatement preparedStatement = connection.prepareStatement(sql);
-                preparedStatement.executeUpdate();
                 preparedStatement.setInt(1, u.getId());
                 preparedStatement.setString(2, u.getFirstname());
                 preparedStatement.setString(3, u.getLastname());
                 preparedStatement.setString(4, u.getEmail());
                 preparedStatement.setString(5, u.getPassword());
                 preparedStatement.setString(6, email);
+                preparedStatement.executeUpdate();
             } else {
                 return null;
             }
